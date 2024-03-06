@@ -41,10 +41,10 @@ class _LandingState extends State<Landing> {
   ];
 
   List<String> message = [
-    'Unlock Your Potential : Explore, Learn, and Grow!',
-    'Challenge Accepted: Skill-Testing Quizzes',
+    'Unlock Your Potential : Explore , Learn, and Grow!',
+    'Challenge Accepted : Skill - Testing Quizzes',
     'Study Smart : Your Notes Companion',
-    'Confidence Booster: Resolve Your Queries Here'
+    'Confidence Booster : Resolve Your Queries Here'
   ];
 
   void startTimer() {
@@ -156,26 +156,23 @@ class ImagePlaceholder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 40.0,
-              fontWeight: FontWeight.w900,
-              letterSpacing: 2.0,
-            ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: width * 0.11,
+            fontWeight: FontWeight.w900,
+            letterSpacing: width * 0.005,
           ),
-          // MaxGap(20.0),
-          SvgPicture.asset(
-            imagePath,
-            fit: BoxFit.contain,
-          ),
-        ],
-      ),
+        ),
+        // MaxGap(20.0),
+        SvgPicture.asset(
+          imagePath,
+          fit: BoxFit.contain,
+        ),
+      ],
     );
   }
 }
